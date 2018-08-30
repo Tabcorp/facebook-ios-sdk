@@ -41,7 +41,6 @@
 
 #if !TARGET_OS_TV
 #import "FBSDKAppEventsUninstall.h"
-#import "FBSDKEventBindingManager.h"
 #import "FBSDKHybridAppEventsScriptMessageHandler.h"
 #endif
 
@@ -293,9 +292,6 @@ static NSString *g_overrideAppID = nil;
   BOOL _explicitEventsLoggedYet;
   FBSDKServerConfiguration *_serverConfiguration;
   FBSDKAppEventsState *_appEventsState;
-#if !TARGET_OS_TV
-  FBSDKEventBindingManager *_eventBindingManager;
-#endif
   NSString *_userID;
 }
 
@@ -840,20 +836,6 @@ static NSString *g_overrideAppID = nil;
   }];
 }
 
-#if !TARGET_OS_TV
-- (void)enableCodelessEvents {
-  if (_serverConfiguration.isCodelessEventsEnabled) {
-    if (!_eventBindingManager) {
-      _eventBindingManager = [[FBSDKEventBindingManager alloc] init];
-      [_eventBindingManager start];
-    }
-
-    [_eventBindingManager updateBindings:[FBSDKEventBindingManager
-                                          parseArray:_serverConfiguration.eventBindings]];
-  }
-}
-#endif
-
 // app events can use a server configuration up to 24 hours old to minimize network traffic.
 - (void)fetchServerConfiguration:(void (^)(void))callback
 {
@@ -867,7 +849,6 @@ static NSString *g_overrideAppID = nil;
         [FBSDKPaymentObserver stopObservingTransactions];
       }
 #if !TARGET_OS_TV
-      [self enableCodelessEvents];
       [FBSDKAppEventsUninstall setUninstallTrackingEnabled:_serverConfiguration.uninstallTrackingEnabled];
 #endif
       if (callback) {
@@ -876,9 +857,6 @@ static NSString *g_overrideAppID = nil;
     }];
     return;
   }
-#if !TARGET_OS_TV
-  [self enableCodelessEvents];
-#endif
   if (callback) {
     callback();
   }
