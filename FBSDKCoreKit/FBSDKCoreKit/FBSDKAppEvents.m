@@ -40,7 +40,6 @@
 #import "FBSDKUserDataStore.h"
 
 #if !TARGET_OS_TV
-#import "FBSDKAppEventsUninstall.h"
 #import "FBSDKHybridAppEventsScriptMessageHandler.h"
 #endif
 
@@ -848,9 +847,6 @@ static NSString *g_overrideAppID = nil;
       } else {
         [FBSDKPaymentObserver stopObservingTransactions];
       }
-#if !TARGET_OS_TV
-      [FBSDKAppEventsUninstall setUninstallTrackingEnabled:_serverConfiguration.uninstallTrackingEnabled];
-#endif
       if (callback) {
         callback();
       }
