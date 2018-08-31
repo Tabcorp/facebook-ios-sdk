@@ -37,7 +37,6 @@
 #import "UI/FBSDKMaleSilhouetteIcon.h"
 #import "UI/FBSDKUIUtility.h"
 #import "UI/FBSDKViewImpressionTracker.h"
-#import "WebDialog/FBSDKWebDialog.h"
 #else
 #import "Device/FBSDKDeviceButton+Internal.h"
 #import "Device/FBSDKDeviceDialogView.h"
