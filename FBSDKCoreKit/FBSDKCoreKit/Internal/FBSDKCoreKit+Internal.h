@@ -32,11 +32,6 @@
 #import "FBSDKMonotonicTime.h"
 #import "FBSDKSystemAccountStoreAdapter.h"
 #import "FBSDKTriStateBOOL.h"
-#import "UI/FBSDKCloseIcon.h"
-#import "UI/FBSDKColor.h"
-#import "UI/FBSDKMaleSilhouetteIcon.h"
-#import "UI/FBSDKUIUtility.h"
-#import "UI/FBSDKViewImpressionTracker.h"
 #else
 #import "Device/FBSDKDeviceButton+Internal.h"
 #import "Device/FBSDKDeviceDialogView.h"
@@ -74,7 +69,4 @@
 #import "TokenCaching/FBSDKAccessTokenCaching.h"
 #import "TokenCaching/FBSDKKeychainStore.h"
 #import "TokenCaching/FBSDKKeychainStoreViaBundleID.h"
-#import "UI/FBSDKButton+Subclass.h"
-#import "UI/FBSDKIcon.h"
-#import "UI/FBSDKLogo.h"
 

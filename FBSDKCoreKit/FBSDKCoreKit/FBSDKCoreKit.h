@@ -21,7 +21,6 @@
 #import <FBSDKCoreKit/FBSDKAccessToken.h>
 #import <FBSDKCoreKit/FBSDKAppEvents.h>
 #import <FBSDKCoreKit/FBSDKApplicationDelegate.h>
-#import <FBSDKCoreKit/FBSDKButton.h>
 #import <FBSDKCoreKit/FBSDKConstants.h>
 #import <FBSDKCoreKit/FBSDKCopying.h>
 #import <FBSDKCoreKit/FBSDKGraphRequest.h>
@@ -37,7 +36,6 @@
 #import <FBSDKCoreKit/FBSDKAppLinkUtility.h>
 #import <FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h>
 #import <FBSDKCoreKit/FBSDKMutableCopying.h>
-#import <FBSDKCoreKit/FBSDKProfilePictureView.h>
 #else
 #import <FBSDKCoreKit/FBSDKDeviceButton.h>
 #import <FBSDKCoreKit/FBSDKDeviceViewControllerBase.h>
