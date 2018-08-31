@@ -32,8 +32,6 @@
 #import <FBSDKCoreKit/FBSDKUtility.h>
 
 #if !TARGET_OS_TV
-#import <FBSDKCoreKit/FBSDKAppLinkResolver.h>
-#import <FBSDKCoreKit/FBSDKAppLinkUtility.h>
 #import <FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h>
 #import <FBSDKCoreKit/FBSDKMutableCopying.h>
 #else

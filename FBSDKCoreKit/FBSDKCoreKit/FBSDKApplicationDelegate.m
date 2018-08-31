@@ -38,7 +38,6 @@
 #import "FBSDKUtility.h"
 
 #if !TARGET_OS_TV
-#import "FBSDKBoltsMeasurementEventListener.h"
 #import "FBSDKBridgeAPIRequest.h"
 #import "FBSDKBridgeAPIResponse.h"
 #import "FBSDKContainerViewController.h"
@@ -77,10 +76,6 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
 + (void)initializeWithLaunchData:(NSNotification *)note
 {
   NSDictionary *launchData = note.userInfo;
-#if !TARGET_OS_TV
-  // Register Listener for Bolts measurement events
-  [FBSDKBoltsMeasurementEventListener defaultListener];
-#endif
   // Set the SourceApplication for time spent data. This is not going to update the value if the app has already launched.
   [FBSDKTimeSpentData setSourceApplication:launchData[UIApplicationLaunchOptionsSourceApplicationKey]
                                    openURL:launchData[UIApplicationLaunchOptionsURLKey]];
