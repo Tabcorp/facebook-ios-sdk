@@ -42,7 +42,6 @@
 #import "FBSDKBridgeAPIRequest.h"
 #import "FBSDKBridgeAPIResponse.h"
 #import "FBSDKContainerViewController.h"
-#import "FBSDKProfile+Internal.h"
 #endif
 
 NSString *const FBSDKApplicationDidBecomeActiveNotification = @"com.facebook.sdk.FBSDKApplicationDidBecomeActiveNotification";
@@ -207,9 +206,6 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
     [self _logSDKInitialize];
   }
 #if !TARGET_OS_TV
-  FBSDKProfile *cachedProfile = [FBSDKProfile fetchCachedProfile];
-  [FBSDKProfile setCurrentProfile:cachedProfile];
-
   NSURL *launchedURL = launchOptions[UIApplicationLaunchOptionsURLKey];
   NSString *sourceApplication = launchOptions[UIApplicationLaunchOptionsSourceApplicationKey];
 

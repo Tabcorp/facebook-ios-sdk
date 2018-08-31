@@ -37,7 +37,6 @@
 #import <FBSDKCoreKit/FBSDKAppLinkUtility.h>
 #import <FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h>
 #import <FBSDKCoreKit/FBSDKMutableCopying.h>
-#import <FBSDKCoreKit/FBSDKProfile.h>
 #import <FBSDKCoreKit/FBSDKProfilePictureView.h>
 #else
 #import <FBSDKCoreKit/FBSDKDeviceButton.h>
