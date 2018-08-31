@@ -62,7 +62,6 @@
 #import "FBSDKLogger.h"
 #import "FBSDKMath.h"
 #import "FBSDKSettings+Internal.h"
-#import "FBSDKSwizzler.h"
 #import "FBSDKTypeUtility.h"
 #import "Network/FBSDKGraphRequest+Internal.h"
 #import "Network/FBSDKGraphRequestConnection+Internal.h"
