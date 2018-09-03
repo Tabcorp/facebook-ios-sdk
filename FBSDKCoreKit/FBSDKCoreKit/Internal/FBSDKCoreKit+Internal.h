@@ -28,7 +28,6 @@
 #import "BridgeAPI/FBSDKURLOpening.h"
 #import "Cryptography/FBSDKCrypto.h"
 #import "FBSDKAudioResourceLoader.h"
-#import "FBSDKContainerViewController.h"
 #import "FBSDKMonotonicTime.h"
 #import "FBSDKSystemAccountStoreAdapter.h"
 #import "FBSDKTriStateBOOL.h"
