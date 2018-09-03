@@ -21,11 +21,6 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #if !TARGET_OS_TV
-#import "BridgeAPI/FBSDKBridgeAPIProtocol.h"
-#import "BridgeAPI/FBSDKBridgeAPIProtocolType.h"
-#import "BridgeAPI/FBSDKBridgeAPIRequest.h"
-#import "BridgeAPI/FBSDKBridgeAPIResponse.h"
-#import "BridgeAPI/FBSDKURLOpening.h"
 #import "Cryptography/FBSDKCrypto.h"
 #import "FBSDKAudioResourceLoader.h"
 #import "FBSDKMonotonicTime.h"
