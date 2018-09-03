@@ -141,23 +141,6 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
   if ([[FBSDKSettings autoLogAppEventsEnabled] boolValue]) {
     [self _logSDKInitialize];
   }
-#if !TARGET_OS_TV
-  NSURL *launchedURL = launchOptions[UIApplicationLaunchOptionsURLKey];
-  NSString *sourceApplication = launchOptions[UIApplicationLaunchOptionsSourceApplicationKey];
-
-  if (launchedURL &&
-      sourceApplication) {
-    Class loginManagerClass = NSClassFromString(@"FBSDKLoginManager");
-    if (loginManagerClass) {
-      id annotation = launchOptions[UIApplicationLaunchOptionsAnnotationKey];
-      id<FBSDKURLOpening> loginManager = [[loginManagerClass alloc] init];
-      return [loginManager application:application
-                               openURL:launchedURL
-                     sourceApplication:sourceApplication
-                            annotation:annotation];
-    }
-  }
-#endif
   return NO;
 }
 
