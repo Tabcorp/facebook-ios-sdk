@@ -21,7 +21,6 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #if !TARGET_OS_TV
-#import "Cryptography/FBSDKCrypto.h"
 #import "FBSDKAudioResourceLoader.h"
 #import "FBSDKMonotonicTime.h"
 #import "FBSDKSystemAccountStoreAdapter.h"
