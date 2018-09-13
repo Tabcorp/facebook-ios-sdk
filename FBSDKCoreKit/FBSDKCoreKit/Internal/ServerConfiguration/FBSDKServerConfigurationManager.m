@@ -20,7 +20,6 @@
 
 #import "FBSDKGraphRequest+Internal.h"
 #import "FBSDKGraphRequest.h"
-#import "FBSDKImageDownloader.h"
 #import "FBSDKInternalUtility.h"
 #import "FBSDKLogger.h"
 #import "FBSDKServerConfiguration+Internal.h"
