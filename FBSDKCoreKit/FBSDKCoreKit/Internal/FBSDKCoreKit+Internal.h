@@ -21,10 +21,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #if !TARGET_OS_TV
-#import "FBSDKAudioResourceLoader.h"
-#import "FBSDKMonotonicTime.h"
 #import "FBSDKSystemAccountStoreAdapter.h"
-#import "FBSDKTriStateBOOL.h"
 #else
 #import "Device/FBSDKDeviceButton+Internal.h"
 #import "Device/FBSDKDeviceDialogView.h"
@@ -41,9 +38,7 @@
 #import "ErrorRecovery/FBSDKErrorRecoveryAttempter.h"
 #import "FBSDKDynamicFrameworkLoader.h"
 #import "FBSDKApplicationDelegate+Internal.h"
-#import "FBSDKDeviceRequestsHelper.h"
 #import "FBSDKError.h"
-#import "FBSDKImageDownloader.h"
 #import "FBSDKInternalUtility.h"
 #import "FBSDKLogger.h"
 #import "FBSDKMath.h"
